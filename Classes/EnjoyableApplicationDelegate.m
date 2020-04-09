@@ -13,6 +13,8 @@
 
 @implementation EnjoyableApplicationDelegate {
     NSStatusItem *statusItem;
+    NSImage *statusIconEnabled;
+    NSImage *statusIconDisabled;
     NSMutableArray *_errors;
 }
 
@@ -45,8 +47,14 @@
      [self.ic indexOfMapping:
       self.ic.currentMapping]];
 
+    statusIconEnabled = [NSImage imageNamed:@"Status Menu Icon"];
+    statusIconEnabled.template = YES;
+
+    statusIconDisabled = [NSImage imageNamed:@"Status Menu Icon Disabled"];
+    statusIconDisabled.template = YES;
+
     statusItem = [NSStatusBar.systemStatusBar statusItemWithLength:36];
-    statusItem.image = [NSImage imageNamed:@"Status Menu Icon Disabled"];
+    statusItem.image = statusIconDisabled;
     statusItem.highlightMode = YES;
     statusItem.menu = self.statusItemMenu;
     statusItem.target = self;
@@ -90,9 +98,9 @@
 
 - (void)flashStatusItem {
     if ([statusItem.image.name isEqualToString:@"Status Menu Icon"]) {
-        statusItem.image = [NSImage imageNamed:@"Status Menu Icon Disabled"];
+        statusItem.image = statusIconDisabled;
     } else {
-        statusItem.image = [NSImage imageNamed:@"Status Menu Icon"];
+        statusItem.image = statusIconEnabled;
     }
     
 }
@@ -109,7 +117,7 @@
 
 - (void)eventSimulationStarted:(NSNotification *)note {
     self.simulatingEventsButton.state = NSOnState;
-    statusItem.image = [NSImage imageNamed:@"Status Menu Icon"];
+    statusItem.image = statusIconEnabled;
     [NSProcessInfo.processInfo
         disableAutomaticTermination:@"Event simulation running."];
     [NSWorkspace.sharedWorkspace.notificationCenter
@@ -121,7 +129,7 @@
 
 - (void)eventSimulationStopped:(NSNotification *)note {
     self.simulatingEventsButton.state = NSOffState;
-    statusItem.image = [NSImage imageNamed:@"Status Menu Icon Disabled"];
+    statusItem.image = statusIconDisabled;
     [NSProcessInfo.processInfo
         enableAutomaticTermination:@"Event simulation running."];
     [NSWorkspace.sharedWorkspace.notificationCenter
