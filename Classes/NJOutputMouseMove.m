@@ -38,7 +38,7 @@
 #define CLAMP(a, l, h) MIN(h, MAX(a, l))
 
 - (BOOL)update:(NJInputController *)ic {
-    if (self.magnitude < 0.05)
+    if (self.magnitude < 0.08)
         return NO; // dead zone
     
     CGSize size = NSScreen.mainScreen.frame.size;
