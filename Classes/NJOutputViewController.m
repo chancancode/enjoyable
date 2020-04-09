@@ -174,8 +174,8 @@
         }
         case 3: {
             NJOutputMouseMove *mm = [[NJOutputMouseMove alloc] init];
-            mm.axis = (int)self.mouseDirSelect.selectedSegment;
-            mm.speed = self.mouseSpeedSlider.floatValue;
+            mm.direction = (int)self.mouseDirSelect.selectedSegment;
+            mm.amount = self.mouseSpeedSlider.floatValue;
             return mm;
         }
         case 4: {
@@ -247,8 +247,8 @@
     }
     else if ([output isKindOfClass:NJOutputMouseMove.class]) {
         [self.radioButtons selectCellAtRow:3 column:0];
-        self.mouseDirSelect.selectedSegment = [(NJOutputMouseMove *)output axis];
-        self.mouseSpeedSlider.floatValue = [(NJOutputMouseMove *)output speed];
+        self.mouseDirSelect.selectedSegment = [(NJOutputMouseMove *)output direction];
+        self.mouseSpeedSlider.floatValue = [(NJOutputMouseMove *)output amount];
     }
     else if ([output isKindOfClass:NJOutputMouseButton.class]) {
         [self.radioButtons selectCellAtRow:4 column:0];

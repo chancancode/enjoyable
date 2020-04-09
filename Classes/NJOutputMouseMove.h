@@ -9,7 +9,9 @@
 
 @interface NJOutputMouseMove : NJOutput
 
-@property (nonatomic, assign) int axis;
-@property (nonatomic, assign) float speed;
+@property (nonatomic, assign) int direction;
+@property (nonatomic, assign) float amount;
+
+- (BOOL)moveMouseToPoint:(NSPoint)point withInputController:(NJInputController *)ic;
 
 @end
