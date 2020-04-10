@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet id <NJInputControllerDelegate> delegate;
 
 @property (nonatomic, assign) NSPoint mouseLoc;
+@property (nonatomic, assign) NSPoint mouseCenter;
 @property (nonatomic, assign) BOOL simulatingEvents;
 @property (nonatomic, readonly) NSArray *devices;
 

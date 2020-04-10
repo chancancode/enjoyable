@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application">
+        <customObject id="-3" userLabel="Application" customClass="NSObject">
             <connections>
                 <outlet property="delegate" destination="482" id="483"/>
                 <outlet property="dockMenu" destination="81" id="732"/>
@@ -130,26 +130,26 @@
         </menu>
         <window title="Enjoyable" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Enjoyable" animationBehavior="default" id="450">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="355" y="59" width="664" height="323"/>
+            <rect key="contentRect" x="355" y="59" width="664" height="406"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <value key="minSize" type="size" width="664" height="323"/>
             <view key="contentView" id="453">
-                <rect key="frame" x="0.0" y="0.0" width="664" height="323"/>
+                <rect key="frame" x="0.0" y="0.0" width="664" height="406"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="916">
-                        <rect key="frame" x="0.0" y="0.0" width="234" height="323"/>
+                        <rect key="frame" x="0.0" y="0.0" width="234" height="406"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="634">
-                                <rect key="frame" x="0.0" y="0.0" width="234" height="323"/>
+                                <rect key="frame" x="0.0" y="0.0" width="234" height="406"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" copiesOnScroll="NO" id="i3F-RM-e0Y">
-                                    <rect key="frame" x="1" y="1" width="232" height="321"/>
+                                    <rect key="frame" x="1" y="1" width="232" height="404"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="systemDefault" indentationPerLevel="16" outlineTableColumn="639" id="637" userLabel="Input Device List">
-                                            <rect key="frame" x="0.0" y="0.0" width="232" height="321"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="232" height="404"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -186,7 +186,7 @@
                                 </scroller>
                             </scrollView>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="913">
-                                <rect key="frame" x="20" y="20" width="194" height="283"/>
+                                <rect key="frame" x="20" y="20" width="194" height="366"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="914">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -197,7 +197,7 @@ Connect a device to begin mapping.</string>
                                 </buttonCell>
                             </button>
                             <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="974">
-                                <rect key="frame" x="20" y="20" width="194" height="283"/>
+                                <rect key="frame" x="20" y="20" width="194" height="366"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" enabled="NO" imageScaling="proportionallyDown" inset="2" id="975">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -210,15 +210,15 @@ Switch back to re-enable input.</string>
                         </subviews>
                     </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="917">
-                        <rect key="frame" x="233" y="0.0" width="431" height="323"/>
+                        <rect key="frame" x="233" y="0.0" width="431" height="406"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <subviews>
                             <box autoresizesSubviews="NO" verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="708">
-                                <rect key="frame" x="12" y="276" width="406" height="5"/>
+                                <rect key="frame" x="12" y="359" width="406" height="5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </box>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="706" userLabel="Input Name">
-                                <rect key="frame" x="9" y="286" width="412" height="17"/>
+                                <rect key="frame" x="9" y="369" width="412" height="17"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="center" placeholderString="No input selected" usesSingleLineMode="YES" id="707">
                                     <font key="font" metaFont="systemBold"/>
@@ -226,8 +226,8 @@ Switch back to re-enable input.</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <matrix verticalHuggingPriority="750" fixedFrame="YES" selectionByRect="NO" translatesAutoresizingMaskIntoConstraints="NO" id="656" userLabel="Output Types">
-                                <rect key="frame" x="24" y="20" width="163" height="250"/>
+                            <matrix verticalHuggingPriority="750" fixedFrame="YES" selectionByRect="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="656" userLabel="Output Types">
+                                <rect key="frame" x="23" y="19" width="163" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 <size key="cellSize" width="163" height="40"/>
@@ -254,11 +254,19 @@ Switch back to re-enable input.</string>
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <buttonCell type="radio" title="Press a mouse button:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="734" userLabel="Mouse Button">
+                                        <buttonCell type="radio" title="Aim the mouse:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="734" userLabel="Mouse Button">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
-                                        <buttonCell type="radio" title="Scroll the mouse:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="735" userLabel="Mouse Scroll">
+                                        <buttonCell type="radio" title="Center the mouse:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="735" userLabel="Mouse Scroll">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <buttonCell type="radio" title="Press a mouse button:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="jip-hh-yHk">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <buttonCell type="radio" title="Scroll the mouse:" imagePosition="left" alignment="left" enabled="NO" inset="2" id="4mF-Wg-uPL">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -269,31 +277,31 @@ Switch back to re-enable input.</string>
                                 </connections>
                             </matrix>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="700" userLabel="Mapping Choice List">
-                                <rect key="frame" x="188" y="153" width="226" height="26"/>
+                                <rect key="frame" x="189" y="236" width="225" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="701">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" title="OtherViews" id="702"/>
                                 </popUpButtonCell>
                             </popUpButton>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="778" customClass="NJKeyInputField">
-                                <rect key="frame" x="191" y="196" width="220" height="23"/>
+                                <rect key="frame" x="191" y="279" width="220" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="686" id="966"/>
                                 </connections>
                             </customView>
                             <slider toolTip="Maximum mouse speed" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="883">
-                                <rect key="frame" x="191" y="108" width="220" height="16"/>
+                                <rect key="frame" x="191" y="191" width="220" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" controlSize="mini" alignment="left" minValue="1" maxValue="20" doubleValue="10" tickMarkPosition="above" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="884"/>
                                 <connections>
-                                    <action selector="mouseSpeedChanged:" target="686" id="885"/>
+                                    <action selector="mouseMoveAmountChanged:" target="686" id="885"/>
                                 </connections>
                             </slider>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="744" userLabel="Mouse Button Selector">
-                                <rect key="frame" x="189" y="70" width="224" height="24"/>
+                                <rect key="frame" x="189" y="68" width="224" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="745">
                                     <font key="font" metaFont="system"/>
@@ -310,7 +318,7 @@ Switch back to re-enable input.</string>
                                 </connections>
                             </segmentedControl>
                             <slider toolTip="Mouse scroll speed" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="887">
-                                <rect key="frame" x="191" y="24" width="146" height="16"/>
+                                <rect key="frame" x="191" y="21" width="146" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <sliderCell key="cell" controlSize="mini" state="on" alignment="left" minValue="1" maxValue="29" doubleValue="15" tickMarkPosition="above" numberOfTickMarks="15" allowsTickMarkValuesOnly="YES" sliderType="linear" id="888"/>
                                 <connections>
@@ -318,7 +326,7 @@ Switch back to re-enable input.</string>
                                 </connections>
                             </slider>
                             <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="749" userLabel="Mouse Scroll Selector">
-                                <rect key="frame" x="189" y="33" width="150" height="20"/>
+                                <rect key="frame" x="189" y="30" width="150" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="750">
                                     <font key="font" metaFont="smallSystem"/>
@@ -334,7 +342,7 @@ Switch back to re-enable input.</string>
                                 </connections>
                             </segmentedControl>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="946">
-                                <rect key="frame" x="343" y="31" width="70" height="18"/>
+                                <rect key="frame" x="343" y="28" width="70" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Smooth" bezelStyle="regularSquare" imagePosition="left" inset="2" id="947">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -344,8 +352,8 @@ Switch back to re-enable input.</string>
                                     <action selector="scrollTypeChanged:" target="686" id="948"/>
                                 </connections>
                             </button>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="754" userLabel="Mouse Motion Selector">
-                                <rect key="frame" x="189" y="117" width="224" height="20"/>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="754" userLabel="Mouse Move Direction Selector">
+                                <rect key="frame" x="189" y="199" width="224" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="755">
                                     <font key="font" metaFont="smallSystem"/>
@@ -357,17 +365,55 @@ Switch back to re-enable input.</string>
                                     </segments>
                                 </segmentedCell>
                                 <connections>
-                                    <action selector="mouseDirectionChanged:" target="686" id="1040"/>
+                                    <action selector="mouseMoveDirectionChanged:" target="686" id="1040"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider toolTip="Maximum mouse speed" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W07-GZ-rPQ">
+                                <rect key="frame" x="190" y="149" width="221" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <sliderCell key="cell" controlSize="mini" alignment="left" minValue="1" maxValue="20" doubleValue="10" tickMarkPosition="above" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="bYU-mG-VVt"/>
+                                <connections>
+                                    <action selector="mouseAimAmountChanged:" target="686" id="3cF-hI-qek"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVl-Kk-yhm" userLabel="Mouse Aim Direction Selector">
+                                <rect key="frame" x="189" y="158" width="224" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="8OR-eF-Rmr">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <segments>
+                                        <segment label="←" width="55"/>
+                                        <segment label="→" width="55" tag="1"/>
+                                        <segment label="↑" width="53"/>
+                                        <segment label="↓" width="52"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="mouseAimDirectionChanged:" target="686" id="do9-FK-GD7"/>
                                 </connections>
                             </segmentedControl>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1020">
-                                <rect key="frame" x="197" y="157" width="193" height="21"/>
+                                <rect key="frame" x="197" y="240" width="193" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Unknown Mapping" bezelStyle="rounded" alignment="left" enabled="NO" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="1021">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdn-z0-CpO" userLabel="Mouse Button Selector">
+                                <rect key="frame" x="189" y="109" width="224" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fill" style="rounded" trackingMode="selectOne" id="SBh-jJ-9my">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="Set" width="111"/>
+                                        <segment label="Restore" width="106" tag="2"/>
+                                    </segments>
+                                </segmentedCell>
+                                <connections>
+                                    <action selector="mouseCenterModeChanged:" target="686" id="Yid-Gd-Uf9"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                     </customView>
                 </subviews>
@@ -417,7 +463,7 @@ Switch back to re-enable input.</string>
             <connections>
                 <outlet property="delegate" destination="482" id="977"/>
             </connections>
-            <point key="canvasLocation" x="139" y="-118"/>
+            <point key="canvasLocation" x="139" y="-77"/>
         </window>
         <menu id="918" userLabel="Status Item Menu">
             <items>
@@ -442,6 +488,7 @@ Switch back to re-enable input.</string>
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="283"/>
         </menu>
         <menu id="923" userLabel="Dock Menu">
             <items>
@@ -453,6 +500,7 @@ Switch back to re-enable input.</string>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="924"/>
             </items>
+            <point key="canvasLocation" x="408" y="283"/>
         </menu>
         <customObject id="482" customClass="EnjoyableApplicationDelegate">
             <connections>
@@ -476,9 +524,12 @@ Switch back to re-enable input.</string>
                 <outlet property="delegate" destination="482" id="1035"/>
                 <outlet property="keyInput" destination="778" id="781"/>
                 <outlet property="mappingPopup" destination="700" id="823"/>
+                <outlet property="mouseAimAmountSlider" destination="W07-GZ-rPQ" id="J9e-Hw-7me"/>
+                <outlet property="mouseAimDirSelect" destination="nVl-Kk-yhm" id="gso-y7-c5c"/>
                 <outlet property="mouseBtnSelect" destination="744" id="746"/>
-                <outlet property="mouseDirSelect" destination="754" id="756"/>
-                <outlet property="mouseSpeedSlider" destination="883" id="886"/>
+                <outlet property="mouseCenterModeSelect" destination="Tdn-z0-CpO" id="Ppb-lg-0w0"/>
+                <outlet property="mouseMoveAmountSlider" destination="883" id="886"/>
+                <outlet property="mouseMoveDirSelect" destination="754" id="xPG-Iz-io4"/>
                 <outlet property="radioButtons" destination="656" id="692"/>
                 <outlet property="scrollDirSelect" destination="749" id="751"/>
                 <outlet property="scrollSpeedSlider" destination="887" id="891"/>
@@ -623,6 +674,7 @@ CA
                     </scroller>
                 </scrollView>
             </subviews>
+            <point key="canvasLocation" x="-365" y="-134"/>
         </customView>
         <customObject id="950" userLabel="Main Mappings Menu Controller" customClass="NJMappingMenuController">
             <userDefinedRuntimeAttributes>

@@ -10,6 +10,8 @@
 #import "NJOutputKeyPress.h"
 #import "NJOutputMapping.h"
 #import "NJOutputMouseMove.h"
+#import "NJOutputMouseAim.h"
+#import "NJOutputMouseCenter.h"
 #import "NJOutputMouseButton.h"
 #import "NJOutputMouseScroll.h"
 
@@ -44,6 +46,8 @@
     for (Class cls in @[NJOutputKeyPress.class,
                         NJOutputMapping.class,
                         NJOutputMouseMove.class,
+                        NJOutputMouseAim.class,
+                        NJOutputMouseCenter.class,
                         NJOutputMouseButton.class,
                         NJOutputMouseScroll.class
          ]) {

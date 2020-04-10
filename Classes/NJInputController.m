@@ -69,6 +69,11 @@ static CVReturn _updateDL(CVDisplayLinkRef displayLink,
                        ]
                                                     delegate:self];
 
+        CGSize size = NSScreen.mainScreen.frame.size;
+
+        _mouseCenter.x = size.width / 2;
+        _mouseCenter.y = size.height / 2;
+
         _mappings = [[NSMutableArray alloc] init];
         _currentMapping = [[NJMapping alloc] initWithName:
                            NSLocalizedString(@"(default)", @"default name for first the mapping")];
