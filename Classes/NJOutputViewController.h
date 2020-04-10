@@ -18,8 +18,11 @@
 
 @property (nonatomic, strong) IBOutlet NJKeyInputField *keyInput;
 @property (nonatomic, strong) IBOutlet NSMatrix *radioButtons;
-@property (nonatomic, strong) IBOutlet NSSegmentedControl *mouseDirSelect;
-@property (nonatomic, strong) IBOutlet NSSlider *mouseSpeedSlider;
+@property (nonatomic, strong) IBOutlet NSSegmentedControl *mouseMoveDirSelect;
+@property (nonatomic, strong) IBOutlet NSSlider *mouseMoveAmountSlider;
+@property (nonatomic, strong) IBOutlet NSSegmentedControl *mouseAimDirSelect;
+@property (nonatomic, strong) IBOutlet NSSlider *mouseAimAmountSlider;
+@property (nonatomic, strong) IBOutlet NSSegmentedControl *mouseCenterModeSelect;
 @property (nonatomic, strong) IBOutlet NSSegmentedControl *mouseBtnSelect;
 @property (nonatomic, strong) IBOutlet NSSegmentedControl *scrollDirSelect;
 @property (nonatomic, strong) IBOutlet NSSlider *scrollSpeedSlider;
@@ -34,10 +37,13 @@
 - (void)focusKey;
 
 - (IBAction)outputTypeChanged:(id)sender;
-- (IBAction)mouseDirectionChanged:(id)sender;
+- (IBAction)mouseMoveDirectionChanged:(id)sender;
+- (IBAction)mouseMoveAmountChanged:(id)sender;
+- (IBAction)mouseAimDirectionChanged:(id)sender;
+- (IBAction)mouseAimAmountChanged:(id)sender;
+- (IBAction)mouseCenterModeChanged:(id)sender;
 - (IBAction)mouseButtonChanged:(id)sender;
 - (IBAction)scrollDirectionChanged:(id)sender;
-- (IBAction)mouseSpeedChanged:(id)sender;
 - (IBAction)scrollSpeedChanged:(id)sender;
 - (IBAction)scrollTypeChanged:(id)sender;
 

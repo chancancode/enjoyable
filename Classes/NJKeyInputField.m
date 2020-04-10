@@ -11,7 +11,9 @@
     // Only used for kVK_... codes.
 
 enum {
+#if !defined(MAC_OS_X_VERSION_10_12) || MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_12
     kVK_RightCommand = kVK_Command - 1,
+#endif
     kVK_Insert = 0x72,
     kVK_Power = 0x7f,
     kVK_ApplicationMenu = 0x6e,
